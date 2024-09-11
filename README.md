@@ -25,7 +25,7 @@ _Over 40,000 recorded in two days_
 
 ![image](https://github.com/user-attachments/assets/b1e502e5-f9a3-4d85-9163-bddfc0181dec)
 
-### I created a Data Collection Rule inside Sentinel that checks for successful sign-ins via RDP every 5 minutes, whilst filtering out our own system logins:
+### I created a Data Collection Rule inside Sentinel that checks for successful sign ins via RDP every 5 minutes, whilst filtering out our own system logins:
 
 _**where** Activity **contains** "success" **and** Account **!contains** "system"_
 
@@ -48,9 +48,11 @@ I logged in remotely using RDP and watched for the incident alert.
 
 ![image](https://github.com/user-attachments/assets/c1385de7-2014-491d-bba4-8827dfc223ce)
 
-### Out of over 83K Event logs, our script detected 12 Incidents involving successful local sign ins over RDP.
+#### Out of over 83K Event logs, our script detected 12 Incidents involving successful local sign ins over RDP.
 
+# Conclusion
 
+In this lab, I realized how important it is to secure remote desktop connections, especially over RDP port 3389, which can easily be targeted by hackers. Setting up Microsoft Sentinel helped me understand how dangerous it can be to leave RDP unprotected, as I saw how quickly suspicious login attempts can happen. Monitoring these logins gave me valuable insight into why it's crucial to secure RDP access, like using stronger protections such as MFA and limiting who can connect. This experience showed me how essential it is to keep an eye on remote access to prevent security issues, which is key in a SOC analyst role.
 
 
 
