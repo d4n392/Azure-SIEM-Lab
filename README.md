@@ -7,14 +7,22 @@ To build my own Security Operations Center (SOC), I first deployed a Security In
 ### SIEM setup
 I begin by selecting Microsoft Azure and spinning up a Windows vm. I enabled native RDP over port 3389 to observe some local remote login traffic. I then installed Microsoft Sentinel . I configure it to monitor remote login attempts specifically over RDP port 3389.
 
+
+![Screenshot 2024-09-10 224025](https://github.com/user-attachments/assets/ac68ed35-82cc-475a-b166-d67bb98b7c2b)
+
+![Screenshot 2024-09-10 224058](https://github.com/user-attachments/assets/bc30b90a-fc7d-4ad7-bbc6-55c5535dc43e)
+
+
 I added Log Analytics to my workspace
 
 I Installed Azure Monitor Agent (AMA) Data Connector to pull logs from the vm endpoint to our Microsoft Sentinel SIEM.
-Created a Data Collection Rule inside Sentinel that checks for successful sign-ins via RDP, whilst filtering out our own system logins:
+Created a Data Collection Rule inside Sentinel that checks for successful sign-ins via RDP every 5 minutes, whilst filtering out our own system logins:
 
 _**where** Activity **contains** "success" **and** Account **!contains** "system"._
 
-![Screenshot 2024-09-10 223147](https://github.com/user-attachments/assets/3c3f7a55-0bc0-41ca-b631-fe3ccf1a0033)
+![image](https://github.com/user-attachments/assets/d03a23d3-b2c4-495b-94bd-9505cfbfbd2d)
+
+![image](https://github.com/user-attachments/assets/119f1976-46f5-45e3-be31-3b98db7a4e79)
 
 ![Screenshot 2024-09-10 222313](https://github.com/user-attachments/assets/3c4ee468-e911-45aa-acfc-f17f50c9374c)
 
@@ -28,22 +36,15 @@ _**where** Activity **contains** "success" **and** Account **!contains** "system
 
 ![Screenshot 2024-09-10 222747](https://github.com/user-attachments/assets/1d26a8c4-3473-4b44-a38a-94a47c9758bc)
 
-![Screenshot 2024-09-10 222921](https://github.com/user-attachments/assets/685d5760-caf2-49d4-adc6-74666e27413d)
-
 ![Screenshot 2024-09-10 223238](https://github.com/user-attachments/assets/322e4663-4d47-4612-a7ab-c28a62d1d679)
 
-![Screenshot 2024-09-10 223707](https://github.com/user-attachments/assets/74752d4f-1c9c-45bb-8634-18d3739b1495)
+![image](https://github.com/user-attachments/assets/b82f4aa1-532a-4edf-a047-77291f3f1cdc)
 
 ![image](https://github.com/user-attachments/assets/8e091e87-ed3f-4946-910e-5e25974e3fa7)
 
 ![Screenshot 2024-09-10 223902](https://github.com/user-attachments/assets/12302ef6-71b3-4926-96bd-500e655f0af5)
 
-![Screenshot 2024-09-10 224025](https://github.com/user-attachments/assets/ac68ed35-82cc-475a-b166-d67bb98b7c2b)
-
-![Screenshot 2024-09-10 224058](https://github.com/user-attachments/assets/bc30b90a-fc7d-4ad7-bbc6-55c5535dc43e)
-
-
-![Screenshot 2024-09-10 230126](https://github.com/user-attachments/assets/2866d640-8403-45a7-b5e6-c6ea66fede05)
+![image](https://github.com/user-attachments/assets/c1385de7-2014-491d-bba4-8827dfc223ce)
 
 
 
