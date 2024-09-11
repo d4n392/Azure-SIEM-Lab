@@ -3,6 +3,23 @@
 
 In this home business lab I built my own SOC and configured Microsoft Sentinel SIEM. This SIEM acts as the central hub for monitoring all my connected devices. The following is the step-by-step process I used to monitor remote logins via RDP port 3389 on my Azure Windows vm.
 
+## Skills Learned:
+
+- SOC setup and configuration
+- Remote login monitoring via RDP (port 3389)
+- Log collection and event filtering
+- Incident detection and response
+- Data Collection Rule creation in SIEM
+- Analyzing event logs and detecting anomalies
+
+## Tools Used:
+
+- Microsoft Azure
+- Microsoft Sentinel (SIEM)
+- Azure Monitor Agent (AMA)
+- Log Analytics
+- RDP (Remote Desktop Protocol)
+
 ### SIEM setup
 I begin by spinning up a Windows vm in Microsoft Azure. I enabled native RDP over port 3389 to observe some local remote login traffic, afterwards I installed Microsoft Sentinel. Set configurations to monitor remote login attempts specifically over RDP port 3389.
 
