@@ -1,4 +1,4 @@
-# Azure-SIEM-Lab
+# Purpose
 
 
 In this home business lab I built my own SOC and configured Microsoft Sentinel SIEM. This SIEM acts as the central hub for monitoring all my connected devices. The following is the step-by-step process I used to monitor remote logins via RDP port 3389 on my Azure Windows vm.
